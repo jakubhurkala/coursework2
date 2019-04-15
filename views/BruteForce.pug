@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  
+  div#top_textarea
+    textarea#inputmessage(rows='8' cols='70' placeholder='Enter the cipher text you want to crack' autofocus)
+  
+  div
+    button#attack(onclick='magic()') Brute Force it!
+    
+  div#crackOutput
+    p#outputmessage
+      
+  div
+    button#top(onclick='goTop()' title='Go to top') Top
+  
