@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  
+  div#reading_area
+    h2.centre Introduction
+    p.par Morse code is a character encoding scheme used in telecommunication that encodes text characters as standardized sequences of two different signal 
+      |durations called dots and dashes or dits and dahs. Morse code is named for Samuel F. B. Morse, an inventor of the telegraph.
+    
+    p.par The International Morse Code encodes the ISO basic Latin alphabet, some extra Latin letters, the Arabic numerals and a small set of punctuation and 
+      |procedural signals (prosigns). Each Morse code symbol is formed by a sequence of dots and dashes. The dot duration is the basic unit of time measurement in 
+      |Morse code transmission. The duration of a dash is three times the duration of a dot. Each dot or dash within a character is followed by period of signal 
+      |absence, called a space, equal to the dot duration. The letters of a word are separated by a space of duration equal tothree dots, and the words are separated 
+      |by a space equal to seven dots. To increase the efficiency of encoding, Morse code was designed so that the length of each symbol is approximately inverse to 
+      |the frequency of occurrence in text of the English language character that it represents. Thus the most common letter in English, the letter "E", has the 
+      |shortest code: a single dot. Because the Morse code elements are specified by proportion rather than specific time durations, the code is usually transmitted 
+      |at the highest rate that the receiver is capable of decoding. The Morse code transmission rate (speed) is specified in groups per minute, commonly referred to 
+      |as words per minute.
+    
+    h2.centre Histroy
+    p.par Morse code was invented by an American called Samuel Finley Breese Morse, (1791-1872). He was not only an inventor but also a famous painter.
+    
+    p.par Before the invention of the telegraph, most messages that had to be sent over long distances were carried by messengers who memorized them or 
+      |carried them in writing. These messages could be delivered no faster than the fastest horse. Messages could also be sent visually, using flags and 
+      |later, mechanical systems called semaphore telegraphs, but these systems required the receiver to be close enough to see the sender, and could not be
+      |used at night.
+      
+    p.par The telegraph allowed messages to be sent very fast over long distances using electricity. The first commercial telegraph was developed by 
+      |William Forthergill Cooke and Charles Wheatstone in 1837. They developed a device which could send messages using electrical signals to line up 
+      |compass needles on a grid containing letters of the alphabet. Then, in 1838, Samuel Morse and his assistant, Alfred Vail, demonstrated an even more 
+      |successful telegraph device which sent messages using a special code - Morse code.
+      
+    p.par Telegraph messages were sent by tapping out the code for each letter in the form of long and short signals. Short signals are referred to as dits 
+      |(represented as dots). Long signals are referred to as dahs (represented as dashes). The code was converted into electrical impulses and sent over 
+      |telegraph wires. A telegraph receiver on the other end of the wire converted the impulses back into to dots and dashes, and decoded the message.
+      
+    h2.centre References
+    ol
+      li.reference
+        a(href='https://en.wikipedia.org/wiki/Morse_code' target='_blamk') https://en.wikipedia.org/wiki/Morse_code
+      li
+        a(href='https://nrich.maths.org/2198' target='_blank') https://nrich.maths.org/2198
+        
+    div
+      button#top(title='Go to top' onclick='goTop()') Top
+      
