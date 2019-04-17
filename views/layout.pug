@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/reading.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    link(rel='stylesheet', href='/stylesheets/signup.css')
+    link(rel='stylesheet', href='/stylesheets/messages.css')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+    script(src='/javascripts/Ciphers.js')
+    script(src='/javascripts/morseSound.js')
+    script(src='/javascripts/forceAttack.js')
+    script(src='/javascripts/show_mess.js')
+  body
+    header.header #{title}
+      if user
+        div.dropaccount
+          button(style='font-size:24px' onclick="document.getElementById('Accdrop').classList.toggle('show')" class="Accbtn" id="Accname") 
+            | #[i(class="fas fa-angle-down")] #[i(class="fas fa-user-circle")]
+          div#Accdrop.Accdrop-content
+            i(class="fas fa-envelope-open AccEle" style="font-size:24px;" )        #[a(href="/users/view_message" style="text-decoration: none; color:black;") View Message]
+            i(class="fas fa-paper-plane AccEle" style="font-size:24px;")        #[a(href="/users/send_message" style="text-decoration: none; color:black;") Send Message]
+            i(class="fas fa-user-cog AccEle" style="font-size:24px;")       Setting
+            i(class="fas fa-id-card AccEle" style="font-size:24px;")        Profile
+            i(class="fas fa-sign-out-alt AccEle" style="font-size:24px;")        #[a(href="/users/logout" style="color:black; text-decoration:none;") Logout]
+    
+    nav
+      ul
+        li.side
+          a(onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="navlink") Login
+        li.side 
+          a(href='/' class='navlink') Home
+        li.side 
+          a(class='navlink') Read more
+          ul.read_more_cont
+            li.side 
+              a(href='CaesarCipher' class='navlink') Caesar Cipher
+            li.side 
+              a(href='MorseCode' class='navlink') Morse Code
+        li.side 
+          a(href='BruteForce' class='navlink') Brute Force
+    
+    div#id01.login_div
+      span(onclick="document.getElementById('id01').style.display='none'" class='close' title="Close Modal") &times;
+      form(class='login-content animatelog' method='POST' action="/users/login" )
+        div.logcontainer
+          label(for='uname') 
+            b Username
+          input(type='text' placeholder='Enter Username' name='username' required class="login" id='username')
+            
+          label(for='psw') 
+              b Password
+          input(type='password' placeholder='Enter Password' name='password' required class="login" id='password')
+            
+          button(type='submit' class='bb') login
+          label #[input(type="checkbox" checked name='remember')] Remember me
+        div.logcontainer(style='background-color:#f1f1f1')
+          button(type='button' onclick="document.getElementById('id01').style.display='none'" class="cancelbtn") Cancel
+          span(class="psw") Forget #[a(href='#' id='forget') Password?] or #[a(href='#' id="signupbt" onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='block'") Sign up]
+    
+    div#id02.signup_div
+      span(onclick="document.getElementById('id02').style.display='none'" class='close1' title="Close Modal1") &times;
+      form(class='signup-content animatesign' method="POST" action="/users/register")
+        div(class='signcontainer')
+          h1 Sign up
+          p Please fill in this form to create an account.
+          hr#hrsign
+          label(for='username')
+            b Username
+          input(type="text" placeholder="Enter Username" name="username" required class="signup")
+            
+          label(for='email')
+            b Email
+          input(type="text" placeholder="Enter Email" name="email" required class="signup")
+            
+          label(for="psw1")
+            b Password
+          input(type='password' placeholder='Enter Password' name='password' required class="signup")
+          
+          label(for='psw-repeat')
+            b Repeat Password
+          input(type='password' placeholder='Repeat Password' name='password2' required class="signup")
+          
+          label #[input(type="checkbox" checked name='remember' style='margin-bottom:15px;')] Remember me
+          
+          p By creating an account you agree to our #[a(href="#" style="color:dodgerblue") Terms & Policy].
+          
+          div.clearfix
+            button(type='button' onclick="document.getElementById('id02').style.display='none'" class='cancelbtn1') Cancel
+            button(type="submit" class="signupbtn") Sign Up
+                      
+    block content
+    
