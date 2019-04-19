@@ -9,3 +9,8 @@ After downloading them open the cmd and type mongo:
 ```
 C:\mongodb\bin>mongo
 ```
+
+After that, open another cmd/git bash go that the folder that this project is in, and type npm start:
+````
+$ npm start
+````
