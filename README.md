@@ -14,3 +14,5 @@ After that, open another cmd/git bash go that the folder that this project is in
 ````
 $ npm start
 ````
+
+Finaly, open chrome and type localhost:3000
