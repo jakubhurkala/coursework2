@@ -1,0 +1,160 @@
+/* Design the the message output area with users */
+.view_area {
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 65%;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  display: table;
+  clear: both;
+}
+
+/* Design the users list */
+.usersList {
+  border-radius: 5px;
+  width: 25%;
+  float: left;
+}
+
+/* Design the Users text */
+#userstxt {
+  text-align: center;
+}
+
+/* Design the list items */
+.useLi {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+/* When hover above user list items change colour */
+.useLi:hover, .useLi:focus {
+  background-color: #555;
+  color: white;
+}
+
+/* Design the message area*/
+.messArea {
+  float: right;
+}
+
+.textArea {
+  border-radius: 5px;
+}
+
+.downDeCh {
+  display: block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+#decryptbt1 {
+  padding: 10px 200px;
+	border-radius: 8px;
+	font-size: 14px;
+	background-color: #555;
+	color: white;
+	border: 5px;
+	cursor: pointer;
+}
+
+#decryptbt1:hover {
+  opacity: 0.8;
+}
+
+#chosd_hash1 {
+  border-radius: 8px;
+  width: 150px;
+	height: 25px;
+  cursor: pointer;
+  float: left;
+}
+
+#key_text1 {
+  display: none;
+}
+
+#key1 {
+  display: none;
+	float: right;
+	width: 35px;
+	height: 35px;
+	border-radius: 8px;
+}
+
+.outputDec {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.Dec-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.containerDec {
+  padding: 16px;
+}
+
+/* Add Zoom Animation */
+.animateDec {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+
+
+/* The below CSS is for the send_message page */
+
+/* Designing the container of the send content */
+sendContainer {
+
+}
+
+#toUser {
+  margin-left: 40%;
+}
+
+#Subject {
+  margin-left: 40%;
+}
+
+#Message {
+  margin-left: 40%;
+}
+
+#Sendbtn {
+  margin-left: 45%;
+}
+
+/*.t {
+  margin-left: 10%;
+}
