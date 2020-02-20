@@ -1,5 +1,6 @@
 body {
-	background-image: url("../images/Background1.jpg");
+	/*background-image: url("../images/Background1.jpg");*/
+	background-color: #2B2D2F;
 }
 
 #Wrapper {
