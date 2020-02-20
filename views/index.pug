@@ -1,35 +1,5 @@
 extends layout
 
 block content
-  div
-    textarea#inputmessage(rows='8' cols='70' placeholder='Enter your plaintext or cipher text' autofocus)
   
-  div#dropdn
-    
-    div
-      select#chosd_hash(onchange='show_key()')
-        option Choose a Cipher
-        option CaesarCipher
-        option Morse Code
-        
-    div#center_right
-      div
-        p#key_text Key:
-      div
-        input#key(type='number' name='key' min='1' max='26')
-  
-  div#en_decryptbt
-    div#encrypt
-      button#encryptbt(onclick='Encrypt()') Encrypt
-    div#decrypt
-      button#decryptbt(onclick='Decrypt()') Decrypt
-  
-  div#output_area
-    textarea#outputmessage(rows='8' cols='70' readonly)
-      
-  div#playSound
-    div#left
-      p#playtext Play Sound:
-    div#right
-      button#playSoundbt(onclick='playSound()')
   
