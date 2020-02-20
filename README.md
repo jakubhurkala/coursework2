@@ -1,4 +1,4 @@
-# almouhanna_mohammed_set008101_coursework2
+# coursework2
 Web Tech CW #2
 
 This coursework is about developing a website to have a log-in and register functions.
