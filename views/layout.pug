@@ -3,15 +3,15 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/reading.css')
+    //link(rel='stylesheet', href='/stylesheets/reading.css')
     link(rel='stylesheet', href='/stylesheets/login.css')
     link(rel='stylesheet', href='/stylesheets/signup.css')
     link(rel='stylesheet', href='/stylesheets/messages.css')
     link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
-    script(src='/javascripts/Ciphers.js')
-    script(src='/javascripts/morseSound.js')
-    script(src='/javascripts/forceAttack.js')
-    script(src='/javascripts/show_mess.js')
+    //script(src='/javascripts/Ciphers.js')
+    //script(src='/javascripts/morseSound.js')
+    //script(src='/javascripts/forceAttack.js')
+    //script(src='/javascripts/show_mess.js')
   body
     header.header #{title}
       if user
@@ -31,15 +31,7 @@ html
           a(onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="navlink") Login
         li.side 
           a(href='/' class='navlink') Home
-        li.side 
-          a(class='navlink') Read more
-          ul.read_more_cont
-            li.side 
-              a(href='CaesarCipher' class='navlink') Caesar Cipher
-            li.side 
-              a(href='MorseCode' class='navlink') Morse Code
-        li.side 
-          a(href='BruteForce' class='navlink') Brute Force
+
     
     div#id01.login_div
       span(onclick="document.getElementById('id01').style.display='none'" class='close' title="Close Modal") &times;
@@ -70,9 +62,25 @@ html
             b Username
           input(type="text" placeholder="Enter Username" name="username" required class="signup")
             
+          label(for='1name')
+            b First Name
+          input(type="text" placeholder="Enter your Firstname" name="1name" required class="signup")
+            
+          label(for='2name')
+            b Surname
+          input(type="text" placeholder="Enter Surname" name="2name" required class="signup")
+            
           label(for='email')
             b Email
           input(type="text" placeholder="Enter Email" name="email" required class="signup")
+            
+          label(for='phoneNo')
+            b Phone Number
+          input(type="text" placeholder="Enter Phone Number" name="phoneNo" required class="signup")
+            
+          label(for='address')
+            b Address
+          input(type="text" placeholder="Enter your Home Address" name="address" required class="signup")
             
           label(for="psw1")
             b Password
