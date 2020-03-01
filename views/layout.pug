@@ -21,9 +21,9 @@ script(src='/javascripts/search.js')
       a.w3-bar-item.w3-button(onclick="document.getElementById('id01').style.display='block'") login
       a.w3-bar-item.w3-button(href='#contact') Contact
     .w3-middle.w3-hide-medium
-      form(method='POST' action="/search-result")
+      form(method='POST' action="/search")
         button(type="submit").w3-bar-item.w3-button #[i.fa.fa-search]
-        input(type="text" placeholder="Search...").w3-bar-item.w3-border.w3-round-large 
+        input(type="text" placeholder="Search..." name="productname").w3-bar-item.w3-border.w3-round-large 
     .w3-right.w3-hide-small
       form
         a.profile.w3-button.w3-bar-item #[i.fa.fa-user]
