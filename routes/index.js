@@ -59,4 +59,15 @@ router.get('/', function(req, res, next) {
     title: 'E-commerce' });
 });
 
+router.post('/search', function(req, res, next) {
+  res.redirect('/search-result?p=' + req.body.productname);
+})
+
+router.get('/search-result', function(req, res, next) {
+  res.render('search-result', {
+    title: 'E-commerce',
+    product: req.query.p
+  });
+});
+
 module.exports = router;
