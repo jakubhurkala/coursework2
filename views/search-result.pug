@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  
+  product= product
+  
+  //- !PAGE CONTENT!
+  .w3-main(style='margin-top: 85px;')
+    .w3-row.w3
+      .w3-col.l3.s6
+        .w3-container
+          .w3-display-container
+            img(src='/images/horse.jpg' style='width:100%')
+            span.w3-tag.w3-display-topleft New
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
+          p
+            | #{product}
+            br
+            b $19.99
+        
+    h3 Search not found
+  
+    h3 Result for #{product}
+  
+  

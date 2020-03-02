@@ -6,31 +6,31 @@ link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
 link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto')
 link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat')
 link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+//link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
 link(rel='stylesheet', href='/stylesheets/login.css')
 link(rel='stylesheet', href='/stylesheets/signup.css')
 link(rel='stylesheet', herf='/stylesheets/style.css')
 script(src='/javascripts/sidebar.js')
+script(src='/javascripts/search.js')
 
-  
-// Sidebar/menu
-nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top(style='z-index:3;width:250px')
-  .w3-container.w3-display-container.w3-padding-16
-    i.fa.fa-remove.w3-hide-large.w3-button.w3-display-topright(onclick='w3_close()')
-    h3.w3-wide
-      b #{title}
-  .w3-padding-64.w3-large.w3-text-grey(style='font-weight:bold')
-    a.w3-bar-item.w3-button(href='/') Home
-    a.w3-bar-item.w3-button(onclick="document.getElementById('id01').style.display='block'") Login
-    a#myBtn.w3-button.w3-block.w3-white.w3-left-align(onclick='myAccFunc()' href='javascript:void(0)')
-      | drop 
-      i.fa.fa-caret-down
-    #demoAcc.w3-bar-block.w3-hide.w3-padding-large.w3-medium
-      a.w3-bar-item.w3-button.w3-light-grey(href='#')
-        i.fa.fa-caret-right.w3-margin-right
-        | Horse detail
-      a.w3-bar-item.w3-button(href='#') HP Printer Detail
-  
+.w3-top
+  .w3-bar.w3-white.w3-padding.w3-card(style='letter-spacing:4px;')
+    a.w3-bar-item.w3-button(href='/') #{title}
+    // Right-sided navbar links. Hide them on small screens
+    .w3-left.w3-hide-medium
+      a.w3-bar-item.w3-button(onclick="document.getElementById('id01').style.display='block'") login
+      a.w3-bar-item.w3-button(href='#contact') Contact
+    .w3-middle.w3-hide-medium
+      form(method='POST' action="/search")
+        button(type="submit").w3-bar-item.w3-button #[i.fa.fa-search]
+        input(type="text" placeholder="Search..." name="productname").w3-bar-item.w3-border.w3-round-large 
+    .w3-right.w3-hide-small
+      form
+        a.profile.w3-button.w3-bar-item #[i.fa.fa-user]
+    .w3-right.w3-hide-small
+      form
+        a.shopping-cart.w3-button.w3-bar-item #[i.fa.fa-shopping-cart]
+        
   div#id01.login_div
     span(onclick="document.getElementById('id01').style.display='none'" class='close' title="Close Modal") &times;
     form(class='login-content animatelog' method='POST' action="/users/login" )
@@ -48,7 +48,7 @@ nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top(style='z-index
       div.logcontainer(style='background-color:#f1f1f1')
         button(type='button' onclick="document.getElementById('id01').style.display='none'" class="cancelbtn") Cancel
         span(class="psw") Forget #[a(href='#' id='forget') Password?] or #[a(href='#' id="signupbt" onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='block'") Sign up]
-  
+        
   div#id02.signup_div
     span(onclick="document.getElementById('id02').style.display='none'" class='close1' title="Close Modal1") &times;
     form(class='signup-content animatesign' method="POST" action="/users/register")
@@ -95,5 +95,74 @@ nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top(style='z-index
         div.clearfix
           button(type='button' onclick="document.getElementById('id02').style.display='none'" class='cancelbtn1') Cancel
           button(type="submit" class="signupbtn") Sign Up
+       
+       
+    
+  
+//- Sidebar/menu
+  nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top(style='z-index:3;width:250px')
+  .w3-container.w3-display-container.w3-padding-16
+    i.fa.fa-remove.w3-hide-large.w3-button.w3-display-topright(onclick='w3_close()')
+    h3.w3-wide
+      b #{title}
+  .w3-padding-64.w3-large.w3-text-grey(style='font-weight:bold')
+    a.w3-bar-item.w3-button(href='/') Home
+    a.w3-bar-item.w3-button(onclick="document.getElementById('id01').style.display='block'") Login
+    a#myBtn.w3-button.w3-block.w3-white.w3-left-align(onclick='myAccFunc()' href='javascript:void(0)')
+      | drop 
+      i.fa.fa-caret-down
+    #demoAcc.w3-bar-block.w3-hide.w3-padding-large.w3-medium
+      a.w3-bar-item.w3-button.w3-light-grey(href='#')
+        i.fa.fa-caret-right.w3-margin-right
+        | Horse detail
+      a.w3-bar-item.w3-button(href='#') HP Printer Detail
+  
+  
 
 block content
+//- Footer
+footer#footer.w3-padding-64.w3-light-grey.w3-small.w3-center
+  .w3-row-padding
+    .w3-col.s4
+      h4 Contact
+      p Questions? Go ahead.
+      form(method="POST" action="/send")
+        p
+          input.w3-input.w3-border(type='text' placeholder='Name' name='Name' required='')
+        p
+          input.w3-input.w3-border(type='text' placeholder='Email' name='Email' required='')
+        p
+          input.w3-input.w3-border(type='text' placeholder='Subject' name='Subject' required='')
+        p
+          input.w3-input.w3-border(type='text' placeholder='Message' name='Message' required='')
+        button.w3-button.w3-block.w3-black(type='submit') Send
+    .w3-col.s4
+      h4 About
+      p
+        a(href='#') About us
+      
+    .w3-col.s4.w3-justify
+      h4 Store
+      p
+        i.fa.fa-fw.fa-map-marker
+        |  Company Name
+      p
+        i.fa.fa-fw.fa-phone
+        |  0044123123
+      p
+        i.fa.fa-fw.fa-envelope
+        |  ex@mail.com
+      h4 We accept
+      p
+        i.fa.fa-fw.fa-cc-amex
+        |  Amex
+      p
+        i.fa.fa-fw.fa-credit-card
+        |  Credit Card
+      br
+      i.fa.fa-facebook-official.w3-hover-opacity.w3-large
+      i.fa.fa-instagram.w3-hover-opacity.w3-large
+      i.fa.fa-snapchat.w3-hover-opacity.w3-large
+      i.fa.fa-pinterest-p.w3-hover-opacity.w3-large
+      i.fa.fa-twitter.w3-hover-opacity.w3-large
+      i.fa.fa-linkedin.w3-hover-opacity.w3-large

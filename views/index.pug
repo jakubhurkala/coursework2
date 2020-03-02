@@ -2,115 +2,69 @@ extends layout
 
 block content
   //- !PAGE CONTENT!
-  .w3-main(style='margin-left:250px')
+  .w3-main(style='margin-top: 85px;')
     
     //- Top header
     header.w3-container.w3-xlarge
-      p.w3-left main
-      p.w3-right
-        //-would be used for later to make functional
-        input(type="text" placeholder="Search...").w3-margin-right.w3-bar-item.w3-border.w3-round-large
-        button.search.w3-button.w3-white.w3-border.w3-round-large #[i.fa.fa-search] 
-        //-would be used for later to make functional
-        button.shopping-cart.w3-button.w3-white.w3-border.w3-round-large #[i.fa.fa-shopping-cart] 
-    //- Image header
-      .w3-display-container.w3-container
-      img(src='' alt='Jeans' style='width:100%')
-      .w3-display-topleft.w3-text-white(style='padding:24px 48px')
-        h1.w3-jumbo.w3-hide-small New arrivals
-        h1.w3-hide-large.w3-hide-medium New arrivals
-        h1.w3-hide-small COLLECTION 2016
-        p
-          a.w3-button.w3-black.w3-padding-large.w3-large(href='#jeans') SHOP NOW
-    //-#jeans.w3-container.w3-text-grey
-    p 4 items
+      
+    p(style='margin-left:25px') 4 items
       
     //- Product grid
     .w3-row.w3
-      .w3-col.l3.s6
+      .w3-col.l3.s6#horse
         .w3-container
-          img(src='/images/horse.jpg' style='width:100%')
+          .w3-display-container
+            img(src='/images/horse.jpg' style='width:100%')
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
           p
             | Horse
             br
             b $24.99
         
-      .w3-col.l3.s6
+      .w3-col.l3.s6#duck
         .w3-container
           .w3-display-container
-            img(src='/images/duck.jpg' style='width:100%')
-            span.w3-tag.w3-display-topleft New
+            img(src='/images/duck.jpg' style='width:100%')            
             .w3-display-middle.w3-display-hover
-              button.w3-button.w3-black
-                | Buy now 
-                i.fa.fa-shopping-cart
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
           p
             | large duck
             br
             b $19.99
         
-      .w3-col.l3.s6
+      .w3-col.l3.s6#printer
         .w3-container
-          img(src='/images/hp_printer.jpg' style='width:100%')
-          p
-            | hp printer
-            br
-            b $20.50
+          .w3-display-container
+            img(src='/images/hp_printer.jpg' style='width:100%')
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
+            p
+              | hp printer
+              br
+              b $20.50
         
-      .w3-col.l3.s6
+      .w3-col.l3.s6#private
         .w3-container
-          img(src='/images/private.png' style='width:100%')
+          .w3-display-container
+            img(src='/images/private.png' style='width:100%')
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
           p
             | sth else
             br
             b $14.99
-        
-  
-    //- Footer
-    footer#footer.w3-padding-64.w3-light-grey.w3-small.w3-center
-      .w3-row-padding
-        .w3-col.s4
-          h4 Contact
-          p Questions? Go ahead.
-          form(action='/action_page.php' target='_blank')
-            p
-              input.w3-input.w3-border(type='text' placeholder='Name' name='Name' required='')
-            p
-              input.w3-input.w3-border(type='text' placeholder='Email' name='Email' required='')
-            p
-              input.w3-input.w3-border(type='text' placeholder='Subject' name='Subject' required='')
-            p
-              input.w3-input.w3-border(type='text' placeholder='Message' name='Message' required='')
-            button.w3-button.w3-block.w3-black(type='submit') Send
-        .w3-col.s4
-          h4 About
-          p
-            a(href='#') About us
-          
-        .w3-col.s4.w3-justify
-          h4 Store
-          p
-            i.fa.fa-fw.fa-map-marker
-            |  Company Name
-          p
-            i.fa.fa-fw.fa-phone
-            |  0044123123
-          p
-            i.fa.fa-fw.fa-envelope
-            |  ex@mail.com
-          h4 We accept
-          p
-            i.fa.fa-fw.fa-cc-amex
-            |  Amex
-          p
-            i.fa.fa-fw.fa-credit-card
-            |  Credit Card
-          br
-          i.fa.fa-facebook-official.w3-hover-opacity.w3-large
-          i.fa.fa-instagram.w3-hover-opacity.w3-large
-          i.fa.fa-snapchat.w3-hover-opacity.w3-large
-          i.fa.fa-pinterest-p.w3-hover-opacity.w3-large
-          i.fa.fa-twitter.w3-hover-opacity.w3-large
-          i.fa.fa-linkedin.w3-hover-opacity.w3-large
     
   //- End page content
