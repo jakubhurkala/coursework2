@@ -13,7 +13,13 @@ block content
     .w3-row.w3
       .w3-col.l3.s6#horse
         .w3-container
-          img(src='/images/horse.jpg' style='width:100%')
+          .w3-display-container
+            img(src='/images/horse.jpg' style='width:100%')
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
           p
             | Horse
             br
@@ -22,12 +28,12 @@ block content
       .w3-col.l3.s6#duck
         .w3-container
           .w3-display-container
-            img(src='/images/duck.jpg' style='width:100%')
-            span.w3-tag.w3-display-topleft New
+            img(src='/images/duck.jpg' style='width:100%')            
             .w3-display-middle.w3-display-hover
-              button.w3-button.w3-black
-                | Buy now 
-                i.fa.fa-shopping-cart
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
           p
             | large duck
             br
@@ -35,15 +41,27 @@ block content
         
       .w3-col.l3.s6#printer
         .w3-container
-          img(src='/images/hp_printer.jpg' style='width:100%')
-          p
-            | hp printer
-            br
-            b $20.50
+          .w3-display-container
+            img(src='/images/hp_printer.jpg' style='width:100%')
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
+            p
+              | hp printer
+              br
+              b $20.50
         
       .w3-col.l3.s6#private
         .w3-container
-          img(src='/images/private.png' style='width:100%')
+          .w3-display-container
+            img(src='/images/private.png' style='width:100%')
+            .w3-display-middle.w3-display-hover
+              form
+                button(type="submit").w3-button.w3-black
+                  | Add to basket 
+                  i.fa.fa-shopping-cart
           p
             | sth else
             br
