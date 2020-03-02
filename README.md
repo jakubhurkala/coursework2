@@ -16,3 +16,8 @@ $ npm start
 ````
 
 Finaly, open chrome and type localhost:3000
+
+In order to make the Contact form works:
+
+1) you have to sign in with the email and password in the code
+2) turn lesssecure on
